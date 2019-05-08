@@ -64,7 +64,7 @@ namespace Program
 
 For detailed documentation, please visit [HTML to PDF API v5 Reference page](https://restpack.io/html2pdf/docs).
 
-```php
+```csharp
 using System;
 using Restpack.Pdf2Html;
 
