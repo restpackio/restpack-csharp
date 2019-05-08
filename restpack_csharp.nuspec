@@ -6,7 +6,7 @@
     <title>Restpack</title>
     <authors>Restpack Inc.</authors>
     <owners>Restpack Inc.</owners>
-    <projectUrl>http://restpack.io</projectUrl>
+    <projectUrl>https://restpack.io</projectUrl>
     <license type="expression">MIT</license>
     <description>Restpack.io C# client for HTML to PDF API, and Screenshot API</description>
     <copyright>Copyright 2019</copyright>
