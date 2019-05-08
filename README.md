@@ -1,4 +1,4 @@
-# reastpack-csharp
+# restpack-csharp
 
 Official C# client for Restpack APIs
 
