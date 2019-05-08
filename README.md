@@ -41,19 +41,19 @@ namespace Program
 
       // Capture given URL. Return the document details and CDN url of the Image
       var captureResult = Screenshot.Capture("https://google.com", options);
-      Console.writeLn(captureResult.Image);
+      Console.WriteLine(captureResult.Image);
 
       // Capture given URL. Return the image file as bytes[]
       var captureBytesResult = Screenshot.CaptureBytes("https://google.com", options);
-      Console.writeLn(captureBytesResult);
+      Console.WriteLine(captureBytesResult);
 
       // Capture given html content. Return the document details and CDN url of the Image
       var captureHTMLResult = Screenshot.CaptureHTML("<h1>Test</h1>", options);
-      Console.writeLn(captureHTMLResult.Image);
+      Console.WriteLine(captureHTMLResult.Image);
 
       // Capture given html content. Return the image file as bytes[]
       var captureBytesResult = Screenshot.CaptureHTMLBytes("<h1>Test</h1>", options);
-      Console.writeLn(captureBytesResult);
+      Console.WriteLine(captureBytesResult);
     }
   }
 }
@@ -77,24 +77,23 @@ namespace Program
       var Pdf2Html = new Pdf2Html("<YOUR ACCESS TOKEN>");
 
       var options = new Pdf2Html.RequestOptions();
-      options.format = "png";
-      options.delay = 3000;
+      options.PDFOrientation = "landscape";
 
       // Convert given URL to PDF. Return the document details and CDN url of PDF
       var captureResult = Pdf2Html.Convert("https://google.com", options);
-      Console.writeLn(captureResult.Image);
+      Console.WriteLine(captureResult.Image);
 
       // Convert given URL to PDF. Return the PDF document as Buffer
       var captureBytesResult = Pdf2Html.ConvertBytes("https://google.com", options);
-      Console.writeLn(captureBytesResult);
+      Console.WriteLine(captureBytesResult);
 
       // Convert given html content to PDF. Return the document details and CDN url of PDF
       var captureHTMLResult = Pdf2Html.ConvertHTML("<h1>Test</h1>", options);
-      Console.writeLn(captureHTMLResult.Image);
+      Console.WriteLine(captureHTMLResult.Image);
 
       // Convert given html content to PDF. Return the PDF document as Buffer
       var captureBytesResult = Pdf2Html.ConvertHTMLBytes("<h1>Test</h1>", options);
-      Console.writeLn(captureBytesResult);
+      Console.WriteLine(captureBytesResult);
     }
   }
 }

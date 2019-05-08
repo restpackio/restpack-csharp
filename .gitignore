@@ -1,4 +1,4 @@
 .vscode
 bin
 obj
-Restpack.1.0.0.nupkg
+*.nupkg

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Restpack</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Restpack</title>
     <authors>Restpack Inc.</authors>
     <owners>Restpack Inc.</owners>
@@ -12,8 +12,8 @@
     <copyright>Copyright 2019</copyright>
     <tags>html2pdf screenshot restpack</tags>
     <dependencies>
-            <dependency id="Newtonsoft.Json" version="9.0" />
-            <dependency id="RestSharp" version="106.6.9" />
-        </dependencies>
+      <dependency id="Newtonsoft.Json" version="12.0.2" />
+      <dependency id="RestSharp" version="106.6.9" />
+    </dependencies>
   </metadata>
 </package>
