@@ -36,8 +36,8 @@ namespace Program
       var Screenshot = new Screenshot("<YOUR ACCESS TOKEN>");
 
       var options = new Screenshot.RequestOptions();
-      options.format = "png";
-      options.delay = 3000;
+      options.Format = "png";
+      options.Delay = 3000;
 
       // Capture given URL. Return the document details and CDN url of the Image
       var captureResult = Screenshot.Capture("https://google.com", options);
