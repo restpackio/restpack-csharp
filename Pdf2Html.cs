@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using RestSharp;
 using Restpack;
 using Newtonsoft.Json;
@@ -136,6 +137,24 @@ namespace Restpack.Pdf2Html
       return response.RawBytes;
     }
 
+    private async Task<byte[]> ExecuteBytesAsync(RequestOptions options)
+    {
+        RestRequest request = new RestRequest();
+
+        var jsonBody = JsonConvert.SerializeObject(options, Formatting.Indented);
+
+        request.AddJsonBody(jsonBody);
+
+        var response = await client.ExecutePostTaskAsync(request);
+
+        if (!response.IsSuccessful)
+        {
+            var resultError = JsonConvert.DeserializeObject<ResultError>(response.Content);
+            throw new Exception(resultError.Error);
+        }
+
+        return response.RawBytes;
+    }
 
     public ResultJson Convert(string url, RequestOptions options = new RequestOptions())
     {
@@ -167,6 +186,14 @@ namespace Restpack.Pdf2Html
       options.HTML = html;
 
       return this.ExecuteBytes(options);
+    }
+
+    public async Task<byte[]> ConvertHTMLBytesAsync(string html, RequestOptions options = new RequestOptions())
+    {
+        options.Json = false;
+        options.HTML = html;
+
+        return await ExecuteBytesAsync(options);
     }
   }
 }
