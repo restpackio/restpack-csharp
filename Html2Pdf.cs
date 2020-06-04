@@ -3,9 +3,9 @@ using RestSharp;
 using Restpack;
 using Newtonsoft.Json;
 
-namespace Restpack.Pdf2Html
+namespace Restpack.Html2Pdf
 {
-  public class Pdf2Html
+  public class Html2Pdf
   {
     private IRestClient client;
 
@@ -87,7 +87,7 @@ namespace Restpack.Pdf2Html
       public bool BlockCookieWarnings;
     }
 
-    public Pdf2Html(string accessToken)
+    public Html2Pdf(string accessToken)
     {
       client = new Client("https://restpack.io/api/html2pdf/v5/convert", accessToken).GetClient();
 

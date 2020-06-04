@@ -66,7 +66,7 @@ For detailed documentation, please visit [HTML to PDF API v5 Reference page](htt
 
 ```csharp
 using System;
-using Restpack.Pdf2Html;
+using Restpack.Html2Pdf;
 
 namespace Program
 {
@@ -74,25 +74,25 @@ namespace Program
   {
     static void Main(string[] args)
     {
-      var Pdf2Html = new Pdf2Html("<YOUR ACCESS TOKEN>");
+      var Html2Pdf = new Html2Pdf("<YOUR ACCESS TOKEN>");
 
-      var options = new Pdf2Html.RequestOptions();
+      var options = new Html2Pdf.RequestOptions();
       options.PDFOrientation = "landscape";
 
       // Convert given URL to PDF. Return the document details and CDN url of PDF
-      var captureResult = Pdf2Html.Convert("https://google.com", options);
+      var captureResult = Html2Pdf.Convert("https://google.com", options);
       Console.WriteLine(captureResult.Image);
 
       // Convert given URL to PDF. Return the PDF document as Buffer
-      var captureBytesResult = Pdf2Html.ConvertBytes("https://google.com", options);
+      var captureBytesResult = Html2Pdf.ConvertBytes("https://google.com", options);
       Console.WriteLine(captureBytesResult);
 
       // Convert given html content to PDF. Return the document details and CDN url of PDF
-      var captureHTMLResult = Pdf2Html.ConvertHTML("<h1>Test</h1>", options);
+      var captureHTMLResult = Html2Pdf.ConvertHTML("<h1>Test</h1>", options);
       Console.WriteLine(captureHTMLResult.Image);
 
       // Convert given html content to PDF. Return the PDF document as Buffer
-      var captureBytesResult = Pdf2Html.ConvertHTMLBytes("<h1>Test</h1>", options);
+      var captureBytesResult = Html2Pdf.ConvertHTMLBytes("<h1>Test</h1>", options);
       Console.WriteLine(captureBytesResult);
     }
   }
