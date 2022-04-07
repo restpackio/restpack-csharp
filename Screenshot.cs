@@ -7,7 +7,7 @@ namespace Restpack.Screenshot
 {
   public class Screenshot
   {
-    private IRestClient client;
+    private RestClient client;
 
     public struct RequestOptions
     {
@@ -95,7 +95,7 @@ namespace Restpack.Screenshot
 
     public Screenshot(string accessToken)
     {
-      client = new Client("https://restpack.io/api/screenshot/v5/capture", accessToken).GetClient();
+      client = new Client("https://restpack.io/api/screenshot/v7/capture", accessToken).GetClient();
 
       JsonConvert.DefaultSettings = () => new JsonSerializerSettings
       {

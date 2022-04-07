@@ -20,7 +20,7 @@ Using Restpack;
 
 ## Screenshot API
 
-For detailed documentation, please visit [Screenshot API v5 Reference page](https://restpack.io/screenshot/docs).
+For detailed documentation, please visit [Screenshot API v7 Reference page](https://restpack.io/screenshot/docs).
 
 ```csharp
 
@@ -62,7 +62,7 @@ namespace Program
 
 ## HTML To PDF API
 
-For detailed documentation, please visit [HTML to PDF API v5 Reference page](https://restpack.io/html2pdf/docs).
+For detailed documentation, please visit [HTML to PDF API v7 Reference page](https://restpack.io/html2pdf/docs).
 
 ```csharp
 using System;

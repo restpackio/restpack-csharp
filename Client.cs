@@ -35,7 +35,7 @@ namespace Restpack
   {
     public string BasePath, AccessToken;
 
-    public IRestClient client;
+    public RestClient client;
 
     public Client(string basePath, string accessToken)
     {
@@ -46,7 +46,7 @@ namespace Restpack
       client.AddDefaultHeader("x-access-token", accessToken);
     }
 
-    public IRestClient GetClient()
+    public RestClient GetClient()
     {
       return client;
     }

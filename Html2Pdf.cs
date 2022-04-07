@@ -8,7 +8,7 @@ namespace Restpack.Html2Pdf
 {
   public class Html2Pdf
   {
-    private IRestClient client;
+    private RestClient client;
 
     public struct RequestOptions
     {
@@ -90,7 +90,7 @@ namespace Restpack.Html2Pdf
 
     public Html2Pdf(string accessToken)
     {
-      client = new Client("https://restpack.io/api/html2pdf/v5/convert", accessToken).GetClient();
+      client = new Client("https://restpack.io/api/html2pdf/v7/convert", accessToken).GetClient();
 
       JsonConvert.DefaultSettings = () => new JsonSerializerSettings
       {
